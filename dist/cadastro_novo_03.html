@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Template 1</title>
+       <link href="css/styles.css" rel="stylesheet" />
+	   <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    </head>
+    <body>
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.html">IPREM</a>
+            <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
+            <!-- Navbar Search-->
+            <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Buscar por..." aria-label="Search" aria-describedby="basic-addon2" />
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+            </form>
+				<!-- Navbar Acessibilidade-->
+			<form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+				<div class="input-group">
+						<a class="nav-link fontResizer_add" href="javascript:void(0);" title="Aumentar a fonte">+A</a>
+						<a class="nav-link fontResizer_reset" href="javascript:void(0);" title="Voltar ao tamanho padrão e ao contraste normal">A</a>
+						<a class="nav-link fontResizer_minus" href="javascript:void(0);" title="Diminuir a fonte">-A</a>
+					<div class="input-group-append">				
+						<a class="nav-link" href="layout-sidenav-light.html" title="Deixar o fundo preto com letras brancas e Deixar o fundo preto com letras amarelas">Contraste</a>
+						<a class="nav-link" href="acessibilidade.html">Acessibilidade</a>	
+					</div>
+				</div>
+			</form>
+            <!-- Navbar-->
+            <ul class="navbar-nav ml-auto ml-md-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                        <a class="dropdown-item" href="login.html">Sair</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+					<div class="nav">
+                            <div class="sb-sidenav-menu-heading"></div>
+                            <a class="nav-link" href="index.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                               COMPREV/IPREM
+                            </a>
+                            <div class="sb-sidenav-menu-heading">CADASTROS</div>
+							<a class="nav-link" href="aposentado.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-id-card"></i></div>
+                                  Aposentado
+                                </a> 
+							<div class="sb-sidenav-menu-heading">CONSULTAS</div>
+							  <a class="nav-link" href="requerimento.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-file-invoice"></i></div>
+                                  Requerimentos
+                              </a>
+								<a class="nav-link" href="processos.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-search"></i></div>
+                                  Processos
+                                </a>
+                             <a class="nav-link" href="certidoes.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-file"></i></div>
+                                Certidões
+                             </a>
+                             <a class="nav-link" href="historicoFuncional.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-history"></i></div>
+                                Histórico Funcional
+                             </a>
+                            <div class="sb-sidenav-menu-heading">RELATÓRIOS</div>
+							<a class="nav-link" href="charts.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                COMPREV/DATAPREV
+                            </a>
+                            <a class="nav-link" href="charts.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                Projeção de receitas de Compensação 
+                            </a>
+                            <a class="nav-link" href="tables.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-fw fa-table"></i></div>
+                               Indicadores/Metas
+                            </a>
+
+                        </div>
+                    </div>
+                    <div class="sb-sidenav-footer">
+                        <div class="small">Logged in as:</div>
+                        Iprem
+                    </div>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid">
+                        <h1 class="mt-4">Cadastro</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item"><a href="index.html">COMPREV/IPREM</a></li>
+                            <li class="breadcrumb-item active">Cadastro</li>
+                        </ol>
+                        <div class="card mb-4">
+						
+							<div class="card-body">
+					           <!-- Nav pills -->
+                              <ul class="nav nav-pills">
+                                 <li class="nav-item">
+                                   <a class="nav-link active" data-toggle="pill" href="#DadosAposentados">Informações do Aposentado</a>
+                                </li>
+								<li class="nav-item">
+                                   <a class="nav-link" data-toggle="pill" href="#Tempos">Tempos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="pill" href="#DadosBeneficio">Informações dos Benefícios </a>
+                                </li>
+							 </ul>
+
+                            <!-- Tab panes -->
+                              <div class="tab-content">
+                              <div class="tab-pane container active" id="DadosAposentados">
+							  <br/>
+								<div class="card mb-4">
+								<div class="card-header">
+								  <b>DADOS PESSOAIS</b>
+								</div>
+								<div class="card-body">
+								<div class="form-group">
+									<div class="row">
+									<div class="col-11"><label for="nome" class="mr-sm-2"><b>Nome:  </b>JOÃO DA SILVA</label></div>
+									</div>
+									<br/>
+									<div class="row">
+									<div class="col-11"><label for="nomeMae" class="mr-sm-2"><b>Nome da Mãe:</b> MARIA HELENA DA SILVA </label></div>
+									</div>
+									</br>
+									<div class="row">
+									<div class="col-4"><label for="dtNascimento" class="mr-sm-2"><b>Data Nascimento:</b> 25/03/1979</label></div>
+									<div class="col-4"><label for="sexo" class="mr-sm-2"><b>Sexo:</b> M</label></div>
+								    <div class="col-4"><label for="estadoCivil" class="mr-sm-2"><b>Estado Civil:</b> Casado</label></div>
+									</div>
+									<br/>
+									<div class="row">
+									<div class="col-4"><label for="cpf" class="mr-sm-2"><b>CPF:</b> 350.340.280-26</label></div>
+									<div class="col-4"><label for="rg" class="mr-sm-2"><b>RG:</b> 34.850.184-5 </label></div>
+									</div>
+									<br/>
+									<div class="row">
+									<div class="col-4"><label for="cep" class="mr-sm-2"><b>CEP:</b> 08372-090 </label></div>
+									<div class="col-4"><label for="logradouro" class="mr-sm-2"><b>Logradouro:</b> RUA: LILLIAN ROTH</label></div>
+									<div class="col-4"><label for="numero" class="mr-sm-2"><b>Nº:</b> 130</label></div>
+									</div>
+									<br/>
+									<div class="row">
+									<div class="col-4"><label for="complemento" class="mr-sm-2"><b>Complemento:</b></label></div>
+									<div class="col-4"><label for="bairro" class="mr-sm-2"><b>Bairro:</b> JARDIM BANDEIRANTE (SÃO RAFAEL)</label></div>		</div>
+									<br/>
+									<div class="row">									
+									<div class="col-4"><label for="municipio" class="mr-sm-2"><b>Municipio:</b> SÃO PAULO</label></div>
+									<div class="col-4"><label for="uf" class="mr-sm-2"><b>UF:</b> SP</label></div>
+									</div>
+								</div>				
+							  </div>
+							  </div>
+			                   <div class="form-group">
+								 <div align="right">
+									<button type="submit" class="btn btn-primary mb-2">Próximo</button>
+								 </div>	
+                               </div>	
+							  </div>
+							  <div class="tab-pane container fade" id="Tempos">
+							  <br/>
+							  <div class="card mb-4">
+								<div class="card-header">
+								  <b>TEMPOS</b>
+								</div>
+								<div class="card-body">
+								<div class="form-group">
+								<div class="row">
+									<div class="col-6"><label for="nome" class="mr-sm-2"><b>CPF: 350.340.280-26 - JOÃO DA SILVA</b></label></div>
+								</div>
+								<br/>
+								<div class="row">
+									<div class="col-6"><label for="nome" class="mr-sm-2"><b>Tempo para aposentadoria: 20 anos, 5 meses e 24 dias </b></label></div>
+									<div class="col-6"><label for="nome" class="mr-sm-2"><b>Tempo necessário para aposentadoria: 35 </b></label></div>
+								</div>
+								<br/>
+								<div class="form-group">
+								 <div class="table-responsive">
+                                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                        <thead>
+                                            <tr>
+											    <th><input type="checkbox"></th>
+											    <th>Matrícula</th>
+											    <th>Tipo Tempo</th>
+												<th>Descrição Tipo Tempo</th>
+												<th>Tempo Líquido Dias</th>
+												<th>Tempo Averbado Dias </th>
+												<th>Regime </th>
+												<th>Requerimentos</th>
+												<th>Estado</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                           <tr>
+											<td><input type="checkbox"/></td>
+											<td>109.320.8-1</td>
+											<td>0098</td>
+											<td>EM - ART 31, LEI 10430/88</td>                                          
+											<td>7305</td>
+											<td>7305</td>
+											<td>RGPS</td>
+											<td><a href="formulario.html" title="aposentadoria"><i class="fas fa-file"></i></a></td>
+											<td>Enviado</td>
+                                           </tr>
+										   <tr>
+											<td>Total</td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td>7305</td>
+											<td>7305</td>
+											<td></td>
+											<td></td>
+											<td></td>
+                                           </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+							    </div>
+							  </div>
+							  </div>
+							  </div>
+							  <div class="form-group">
+								 <div align="right">
+								    <button type="submit" class="btn btn-primary mb-2">Voltar</button>
+									<button type="submit" class="btn btn-primary mb-2">Próximo</button>
+								 </div>	
+                               </div>
+							  </div>
+                              <div class="tab-pane container fade" id="DadosBeneficio">
+							  <br/>
+								<div class="card mb-4">
+								<div class="card-header">
+								  <b>APOSENTADORIA</b>
+								</div>
+								<div class="card-body">
+								<div class="form-group">
+								 <div class="row">
+									<div class="col-6"><label for="tipoAposentadoria" class="mr-sm-2"><b> Tipo de Aposentadoria:</b> Compulsoria e Invalidez</label></div>
+								 </div>
+								 <br/>
+								 <div class="row">
+									<div class="col-6"><label for="processoAposen" class="mr-sm-2"><b>Nº processo aposentadoria:</b> 2019.2.231.546-9</label></div>
+									<div class="col-6"><label for="dtbeneficio" class="mr-sm-2"><b>Data de Início do Benefício:</b> 14/03/2019</label></div>
+								 </div>
+								 <br/>
+								 <div class="row">
+									<div class="col-6"><label for="tempoContribuicao" class="mr-sm-2"><b>Tempo de Contribuição Total (dias):</b>  7305</label></div>
+									<div class="col-6"><label for="tempoRO" class="mr-sm-2"><b>Tempo de Contribuição no Regime Origem  (dias):</b>  7305</label></div>
+									
+								 </div>
+								 <br/>
+								 <div class="row">	
+                                    <div class="col-6"><label for="valorbenef" class="mr-sm-2"><b> Valor do Benefício:</b> 13.000,00</label></div>
+									<div class="col-6"><label for="dt" class="mr-sm-2"><b>Data da Cessação:</b>  </label></div>
+								 </div>
+								 <br/>
+								 <div class="row">	
+                                    <div class="col-6"><label for="protocolo" class="mr-sm-2"><b> Protocolo de Certidão:</b> 999999999999</label></div>
+									<div class="col-6"><label for="dt" class="mr-sm-2"><b>Data de Ingresso na Origem:</b> 15/04/1999 </label></div>
+								 </div>
+								 <br/>
+								<div class="row">	
+                                    <div class="col-6"><label for="protocolo" class="mr-sm-2"><b> Data desvinculação na Origem:</b> 14/02/2019</label></div>
+									<div class="col-6"><label for="dt" class="mr-sm-2"><b>Data de Homologação TCM:</b>  </label></div>
+								 </div>
+								 <br/>
+								 <div class="row">
+									<div class="col-4"><label for="vacancia" class="mr-sm-2"><b> Tipo de Vacância:</b></label></div>
+									<div class="col-4"><label for="dtvacancia" class="mr-sm-2"><b>Data da Vacância:</b> </label></div>
+								 </div>	
+								<div class="row">
+								<div class="col-4"><select name="vacância" class="custom-select" disabled>
+									<option selected  value="0">Selecione</option>
+									<option value="1">FALECIMENTO</option>
+									<option value="2">DOENÇA</option>
+								</select></div>
+								<div class="col-4"><input type="text" class="form-control mb-2 mr-sm-2" placeholder="" id="dtVacancia" value="" disabled></div>
+								<div class="col-4"><button type="submit" class="btn btn-primary mb-2">Alterar</button></div>
+								</div>	
+								</div>																
+								</div>		
+							   </div>
+						<div class="card mb-4">
+							<div class="card-header">
+							<b>PENSÃO</b>
+							</div>
+						<div class="card-body">
+						<div class="form-group">
+									
+						<div class="row">
+						<div class="col-6"><label for="nrpensao" class="mr-sm-2"><b>Nº do processo pensão:</b> </label></div>
+						<div class="col-6"><label for="nrpensao" class="mr-sm-2"><b>Número da pensão:</b> </label></div>
+						</div>	
+						<br/>
+						<div class="row">
+						  <div class="col-6"><label for="dtInicioPensao" class="mr-sm-2"><b>Data de Início do benefício:</b> </label></div>
+						  <div class="col-6"><label for="dtInicioPgto" class="mr-sm-2"><b>Data de Início do Pagamento:</b> </div>
+						</div>
+						<br/>
+						<div class="row">
+						  <div class="col-6"><label for="renda" class="mr-sm-2"><b>Renda Mensal Inicial:</b></div>
+						  <div class="col-6"><label for="dthomologacao" class="mr-sm-2"><b>Data de Homologação no TCM:</b> </div>
+						</div>
+						<br/>
+						</div>
+                           </div>
+                            </div>
+						 		<div class="card mb-4">
+								<div class="card-header">
+								  <b><i class="fas fa-user"></i> DEPENDENTES</b>
+								</div>
+								  <div class="card-body">
+									<div class="form-group">
+									<div class="table-responsive">
+                                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                        <thead>
+                                            <tr>
+											    <th>CPF</th>
+												<th>Nome</th>
+												<th>Nome da Mãe</th>
+												<th>Data de Nascimento</th>
+												<th>Sexo</th>
+												<th>Estado Civil</th>
+											    <th>Vinculo</th>
+												<th>Capacidade</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+											 <td></td>
+											 <td></td>
+											 <td></td>
+											 <td></td>
+											 <td></td>
+											 <td></td>
+											 <td></td>
+											 <td>-</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>						
+								</div>	
+                               </div>	
+							   </div>	
+							<div class="form-group">
+							<div align="right">							 
+							 <button type="submit" class="btn btn-primary mb-2">Voltar</button>
+							 </div>
+						   </div>	
+						</div>
+
+                      <!--  <div style="height: 100vh;"></div>
+
+                        <div class="card mb-4"><div class="card-body">When scrolling, the navigation stays at the top of the page. This is the end of the static navigation demo.</div></div> -->
+                   </div>
+                </main>
+               <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted"> </div>
+							      <div>
+                                <!--<a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>-->
+								PRODAM
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="vendor/jquery.cookie.js"></script>
+		<script src="js/functions.js"></script>
+	    <script src="js/scripts.js"></script>	
+		<script src="js/cadastro.js"></script>	
+        <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/datatables-demo.js"></script>
+    </body>
+</html>
